@@ -353,7 +353,7 @@ nav.menu-desktop a:hover::after {
 main {
     padding: 0 3%;
     height: 510px;
-    
+     overflow-x: hidden;
 }
 
 .flex-main {
