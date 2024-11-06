@@ -489,7 +489,7 @@ section.about {
     font-size: 1.5em;
   }
   .descrition-about p {
-    max-width: 600px;
+    max-width: 700px;
   }
 }
 @media screen and (max-width: 580px) {
