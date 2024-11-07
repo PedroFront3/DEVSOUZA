@@ -409,7 +409,11 @@ section.about {
 }
 
 .title span {
-  color: var(--orange-color);
+  background-image: linear-gradient(45deg, #ff4000, #9c3806, #ff4000 );
+  background-size: 400% 100%;
+  animation: gradient 10s ease-in-out infinite alternate;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .flex-about {
