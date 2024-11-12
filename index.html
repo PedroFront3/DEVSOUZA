@@ -499,19 +499,19 @@
               <div id="form">
 
                     <div class="input-wraper w100">
-                        <input type="text" name="nome" placeholder="Nome:" required pattern="[A-Za-zÀ-ÿ\s]{3,50}" title="Insira um nome válido com pelo menos 3 letras e sem números ou símbolos"/>
+                        <input type="text" name="nome" id="username" placeholder="Nome:" required pattern="[A-Za-zÀ-ÿ\s]{3,50}" title="Insira um nome válido com pelo menos 3 letras e sem números ou símbolos"/>
                     </div>
                 
                     <div class="input-wraper w50">
-                        <input type="text" name="email" placeholder="E-mail:" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Insira um e-mail válido"/>
+                        <input type="text" name="email" id="email" placeholder="E-mail:" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Insira um e-mail válido"/>
                     </div>
                 
                     <div class="input-wraper w50">
-                        <input type="text" name="telefone" placeholder="Telefone:" required pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" title="Insira um telefone válido no formato (XX) XXXXX-XXXX ou (XX) XXXX-XXXX"/>
+                        <input type="text" name="telefone" id="phone" placeholder="Telefone:" required pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" title="Insira um telefone válido no formato (XX) XXXXXXXXX ou (XX) XXXXXXXX"/>
                     </div>
                 
                     <div class="input-wraper w100">
-                        <textarea name="mensagem" placeholder="Deixe sua mensagem.." required></textarea>
+                        <textarea name="mensagem"  id="mensagem" placeholder="Deixe sua mensagem.." required></textarea>
                     </div>
                 
                     <div class="input-wraper w100">
@@ -522,11 +522,7 @@
             
             </form>
             
-            <div id="successAlert" class="alert">
-                Formulário enviado com sucesso!
-            </div>
-
-             <div class="clear"></div>
+           <div class="clear"></div>
          </section>
 
     </section>
@@ -577,7 +573,38 @@
          </section>
 
     </footer>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import { getDatabase, ref, set, get, child  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+ 
+    // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCz2BfmP3rpkgpoPpcu-gm6z0XZpTn5bNo",
+    authDomain: "dev-souza.firebaseapp.com",
+    projectId: "dev-souza",
+    storageBucket: "dev-souza.firebasestorage.app",
+    messagingSenderId: "300441979724",
+    appId: "1:300441979724:web:bddc6f456eaed385fb5de9"
+  };
 
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+    //get ref to database services 
+        const db = getDatabase(app);
+
+        document.getElementById("submit").addEventListener('click', function(e){
+            set(ref(db,'user/' + document.getElementById("username").value),
+            {
+               username:document.getElementById("username").value,
+               email:document.getElementById("email").value,
+               phone:document.getElementById("phone").value,
+               mensagem:document.getElementById("mensagem").value,
+            });
+
+            alert("Formulário enviado!");
+        });
+</script>
 
 </body>
 <script src="js/menu.js"></script>
