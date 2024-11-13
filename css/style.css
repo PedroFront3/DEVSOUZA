@@ -789,7 +789,7 @@ section.project {
     padding: 0 2%;
   }
   .slide-single .box-project p {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
   .flex-box-project {
     display: flex;
@@ -817,7 +817,7 @@ section.project {
   }
   .slide-single .box-project p {
     font-weight: normal;
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   .btn-project {
     padding: 10px 30px;
@@ -848,7 +848,7 @@ section.project {
   }
   .slide-single .box-project p {
     font-weight: normal;
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
   .btn-project {
     padding: 8px 20px;
@@ -876,7 +876,7 @@ section.project {
     padding: 0 2%;
   }
   .slide-single .box-project p {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 }
 @media screen and (max-width: 830px) {
@@ -896,7 +896,7 @@ section.project {
     padding: 0 2%;
   }
   .slide-single .box-project p {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 }
 @media screen and (max-width: 768px) {
@@ -916,7 +916,7 @@ section.project {
     padding: 0 2%;
   }
   .slide-single .box-project p {
-    font-size: 0.5em;
+    font-size: 0.7em;
   }
   .flex-box-project {
     padding: 0 2%;
@@ -956,7 +956,7 @@ section.project {
     padding: 0 2%;
   }
   .slide-single .box-project p {
-    font-size: 0.5em;
+    font-size: 0.7em;
   }
   .flex-box-project {
     padding: 0 2%;
