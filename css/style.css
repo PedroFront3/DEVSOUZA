@@ -716,6 +716,23 @@ section.project {
   font-family: sans-serif;
 }
 
+  .flex-skills {
+        display: flex;
+        gap: .5rem;
+        padding: 0 2%;
+        justify-content: center;
+   }
+
+   .flex-skills {
+        img {
+            width: 40px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
 .flex-box-project {
   display: flex;
   align-items: center;
@@ -923,22 +940,7 @@ section.project {
     top: 5px;
   }
 
-   .flex-skills {
-        display: flex;
-        gap: .5rem;
-        padding: 0 2%;
-        justify-content: center;
-   }
-
-   .flex-skills {
-        img {
-            width: 40px;
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-        }
-    }
+ 
   .flex-box-project {
     display: flex;
     align-items: center;
