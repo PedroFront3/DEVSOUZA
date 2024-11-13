@@ -733,6 +733,13 @@ section.project {
         }
     }
 
+    .border-skills {
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        background-color: var(--menu-mobile-color);
+    }
+
 .flex-box-project {
   display: flex;
   align-items: center;
